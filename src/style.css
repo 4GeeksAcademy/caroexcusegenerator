@@ -2,3 +2,7 @@
 .contenedor {
   height: 700px;
 }
+
+p {
+  font-family: "Permanent Marker", cursive;
+}
