@@ -5,6 +5,10 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
+function selecAleatoria(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
 window.onload = function() {
   //write your code here
   let who = ["My baby", "The dog", "The cat"];
@@ -18,11 +22,11 @@ window.onload = function() {
     "while I was praying"
   ];
   document.getElementById("excuse").innerHTML =
-    who[Math.floor(Math.random() * who.length)] +
+    selecAleatoria(who) +
     " " +
-    action[Math.floor(Math.random() * action.length)] +
+    selecAleatoria(action) +
     " " +
-    what[Math.floor(Math.random() * what.length)] +
+    selecAleatoria(what) +
     " " +
-    when[Math.floor(Math.random() * when.length)];
+    selecAleatoria(when);
 };
