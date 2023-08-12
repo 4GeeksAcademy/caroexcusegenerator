@@ -5,8 +5,8 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-function selectRandom(array) {
-  return array[Math.floor(Math.random() * array.length)];
+function getRandom(array) {
+  return array[ Math.floor( Math.random() * array.length ) ];
 }
 
 window.onload = function() {
@@ -21,13 +21,13 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
-  let sentenceExcuse =
-    selectRandom(who) +
+  let excuseSentence =
+    getRandom(who) +
     " " +
-    selectRandom(action) +
+    getRandom(action) +
     " " +
-    selectRandom(what) +
+    getRandom(what) +
     " " +
-    selectRandom(when);
-  document.getElementById("excuse").innerHTML = sentenceExcuse;
+    getRandom(when);
+  document.getElementById("excuse").innerHTML = excuseSentence;
 };
