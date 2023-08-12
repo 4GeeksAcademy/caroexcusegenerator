@@ -5,8 +5,8 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-function selecAleatoria(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
+function selectRandom(array) {
+  return array[Math.floor(Math.random() * array.length)];
 }
 
 window.onload = function() {
@@ -21,12 +21,13 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
-  document.getElementById("excuse").innerHTML =
-    selecAleatoria(who) +
+  let sentenceExcuse =
+    selectRandom(who) +
     " " +
-    selecAleatoria(action) +
+    selectRandom(action) +
     " " +
-    selecAleatoria(what) +
+    selectRandom(what) +
     " " +
-    selecAleatoria(when);
+    selectRandom(when);
+  document.getElementById("excuse").innerHTML = sentenceExcuse;
 };
